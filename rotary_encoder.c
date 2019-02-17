@@ -369,6 +369,3 @@ MODULE_ALIAS("platform:" DRV_NAME);
 MODULE_DESCRIPTION("GPIO rotary encoder driver");
 MODULE_AUTHOR("Daniel Mack <daniel@caiaq.de>, Johan Hovold");
 MODULE_LICENSE("GPL v2");
-
-
-

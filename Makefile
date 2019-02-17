@@ -7,7 +7,8 @@ clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 install:
-	sudo cp rotary_encoder.ko /lib/modules/$(shell uname -r)/extra
-	sudo cp 90-devinput-rotary.rules /etc/udev/rules.d/
-	sudo depmod -a
-	sudo modprobe rotary_encoder
+	mkdir -p /lib/modules/$(shell uname -r)/extra
+	cp -PR rotary_encoder.ko /lib/modules/$(shell uname -r)/extra/rotary_encoder.ko
+	cp 90-devinput-rotary.rules /etc/udev/rules.d/
+	depmod -a
+	modprobe rotary_encoder
